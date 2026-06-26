@@ -10,7 +10,7 @@ This project demonstrates the deployment and use of **Splunk Enterprise** as a S
 
 Using a realistic business scenario based on **ButterByte Biscuits Ltd**, the project showcases how machine data can be transformed into actionable operational, business, and security insights through the use of Search Processing Language (SPL), dashboards, and structured investigation techniques.
 
-The project follows the workflow of a Junior SOC Analyst by collecting log data, performing operational monitoring, identifying suspicious web activity, estimating business impact, documenting incident response, and presenting findings through executive dashboards.
+The project demonstrates how a Junior SOC Analyst can use Splunk Enterprise to transform raw machine data into operational, business, and security intelligence through structured investigation and dashboard-driven analysis.
 
 ---
 # 🎯 Business Scenario
@@ -96,3 +96,58 @@ Throughout this project, the following technical and analytical skills were demo
 | Git | Version control |
 | GitHub | Source code and documentation management |
 | Visual Studio Code | Project documentation and Markdown editing |
+
+# 🏗️ Solution Architecture
+
+The project simulates a real-world Security Information and Event Management (SIEM) environment in which machine-generated Apache web server logs are collected, indexed, analysed, and visualised using Splunk Enterprise.
+
+The solution consists of five primary components:
+
+1. **Python Log Generator** – Generates realistic Apache-style web server logs.
+2. **Apache Access Log Dataset** – Stores simulated HTTP requests.
+3. **Splunk Enterprise** – Collects, indexes, and analyses log data.
+4. **Interactive Dashboards** – Present operational, business, DevOps, and security insights.
+5. **SOC Investigation Process** – Uses SPL searches to investigate suspicious behaviour and document findings.
+
+The overall architecture is illustrated below.
+
+> ![Splunk Solution Architecture](architecture/splunk_architecture.png)
+**Figure 1.** High-level solution architecture illustrating the end-to-end workflow from simulated Apache log generation through Splunk data ingestion, SPL analysis, dashboard development, and SOC decision-making.
+
+# 🔄 Data Pipeline
+
+The project follows a structured data pipeline that transforms raw machine data into actionable operational and security intelligence.
+
+1. Python generates simulated Apache web server logs.
+2. Log files are written to the Ubuntu filesystem.
+3. Splunk monitors the log directory.
+4. Events are indexed into the `main` index.
+5. Search Processing Language (SPL) queries analyse the indexed events.
+6. Interactive dashboards visualise the results.
+7. SOC analysts investigate suspicious activity and document findings.
+
+> *![Data Pipeline](architecture/data_flow.png)
+
+**Figure 2.** ![Data Pipeline](architecture/data_flow.png) End-to-end data pipeline illustrating how simulated Apache web server logs are generated, monitored, indexed, transformed into searchable events, and analysed using Splunk Enterprise dashboards.
+
+# ⚙️ Project Workflow
+
+The project follows a structured monitoring and investigation workflow similar to that used within a Security Operations Centre (SOC).
+
+1. Generate simulated web server logs.
+2. Configure Splunk data inputs.
+3. Onboard Apache log data.
+4. Validate field extraction.
+5. Develop dashboards for different stakeholders.
+6. Perform operational monitoring.
+7. Conduct business analytics.
+8. Investigate suspicious web activity.
+9. Document findings.
+10. Present executive-level summaries.
+
+> *## SOC Investigation Workflow
+
+![SOC Workflow](architecture/soc_workflow.png)
+
+**Figure 3.** Security Operations Centre (SOC) investigation workflow illustrating the structured process followed by analysts when investigating suspicious activity, assessing risk, collecting evidence, escalating incidents, and reporting findings.*
+
